@@ -423,6 +423,7 @@ pnpm generate:blog-manifest  # 生成博客清单
 | **CoolChange.AI** | AI Development Studio | [https://coolchange.ai](https://coolchange.ai) |
 | **chatPPT.app** | AI Presentation Generator | [https://chatppt.app](https://chatppt.app) |
 | **AIHealthGuide** | AI Health Assistant | [https://aihealthguide.app](https://aihealthguide.app) |
+|  | Launch platform for builders, AI startups, and SaaS founders to get discovered and earn a permanent dofollow backlink. | https://nicklaunches.com/ |
 
 <br/>
 
