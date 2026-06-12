@@ -91,6 +91,7 @@ INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name
 -- AI 视频 (6个)
 ('tool_runway', 'runway', 'runway.com', 'https://runway.com', NULL, 'https://www.google.com/s2/favicons?domain=runway.com&sz=128', 'Runway', 'AI video generation and editing platform. Gen-2 creates videos from text or images with cinematic quality.', 'Runway', 'AI视频生成和编辑平台。Gen-2可从文本或图像创建电影级质量的视频。', 'published'),
 ('tool_pika', 'pika', 'pika.art', 'https://pika.art', NULL, 'https://www.google.com/s2/favicons?domain=pika.art&sz=128', 'Pika', 'AI video generator that creates and edits videos from text prompts. Known for smooth animations and effects.', 'Pika', 'AI视频生成器，从文本提示创建和编辑视频。以流畅的动画和效果著称。', 'published'),
+('tool_imagineclip', 'imagineclip', 'imagineclip.com', 'https://imagineclip.com', NULL, 'https://www.google.com/s2/favicons?domain=imagineclip.com&sz=128', 'ImagineClip', 'AI video generator for social clips, avatar videos, and stylized visual effects.', 'ImagineClip', 'AI视频生成器，用于社交短片、头像视频和风格化视觉特效。', 'published'),
 ('tool_heygen', 'heygen', 'heygen.com', 'https://heygen.com', NULL, 'https://www.google.com/s2/favicons?domain=heygen.com&sz=128', 'HeyGen', 'AI video generator for creating professional videos with AI avatars. Perfect for marketing and training content.', 'HeyGen', 'AI视频生成器，用AI数字人创建专业视频。适合营销和培训内容。', 'published'),
 ('tool_synthesia', 'synthesia', 'synthesia.io', 'https://synthesia.io', NULL, 'https://www.google.com/s2/favicons?domain=synthesia.io&sz=128', 'Synthesia', 'Create AI videos with realistic avatars in 120+ languages. Popular for corporate training and marketing.', 'Synthesia', '用逼真数字人创建120多种语言的AI视频。在企业培训和营销领域广受欢迎。', 'published'),
 ('tool_luma', 'luma-ai', 'lumalabs.ai', 'https://lumalabs.ai', NULL, 'https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128', 'Luma AI', 'AI video generation with Dream Machine. Creates cinematic videos from text and images with impressive quality.', 'Luma AI', 'Dream Machine AI视频生成。从文本和图像创建高质量的电影级视频。', 'published'),
@@ -164,6 +165,8 @@ INSERT INTO tool_category (tool_id, category_id) VALUES
 -- 视频
 ('tool_runway', 'cat_video'),
 ('tool_pika', 'cat_video'),
+('tool_imagineclip', 'cat_video'),
+('tool_imagineclip', 'cat_business'),
 ('tool_heygen', 'cat_video'),
 ('tool_heygen', 'cat_business'),
 ('tool_synthesia', 'cat_video'),
@@ -339,6 +342,12 @@ INSERT INTO tool_tag (tool_id, tag_id) VALUES
 ('tool_pika', 'tag_diffusion'),
 ('tool_pika', 'tag_video_out'),
 ('tool_pika', 'tag_trending'),
+-- ImagineClip
+('tool_imagineclip', 'tag_freemium'),
+('tool_imagineclip', 'tag_creator'),
+('tool_imagineclip', 'tag_marketer'),
+('tool_imagineclip', 'tag_video_out'),
+('tool_imagineclip', 'tag_new'),
 -- HeyGen
 ('tool_heygen', 'tag_paid'),
 ('tool_heygen', 'tag_enterprise'),

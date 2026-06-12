@@ -173,6 +173,7 @@ const toolsData = [
   // AI 视频 (6个)
   { id: 'tool_runway', slug: 'runway', domain: 'runway.com', websiteUrl: 'https://runway.com', logoUrl: 'https://runway.com/favicon.ico', nameEn: 'Runway', descriptionEn: 'AI video generation and editing platform. Gen-2 creates videos from text or images with cinematic quality.', nameZh: 'Runway', descriptionZh: 'AI视频生成和编辑平台。Gen-2可从文本或图像创建电影级质量的视频。', status: 'published' },
   { id: 'tool_pika', slug: 'pika', domain: 'pika.art', websiteUrl: 'https://pika.art', logoUrl: 'https://pika.art/favicon.ico', nameEn: 'Pika', descriptionEn: 'AI video generator that creates and edits videos from text prompts. Known for smooth animations and effects.', nameZh: 'Pika', descriptionZh: 'AI视频生成器，从文本提示创建和编辑视频。以流畅的动画和效果著称。', status: 'published' },
+  { id: 'tool_imagineclip', slug: 'imagineclip', domain: 'imagineclip.com', websiteUrl: 'https://imagineclip.com', logoUrl: 'https://imagineclip.com/favicon.ico', nameEn: 'ImagineClip', descriptionEn: 'AI video generator for social clips, avatar videos, and stylized visual effects.', nameZh: 'ImagineClip', descriptionZh: 'AI视频生成器，用于社交短片、头像视频和风格化视觉特效。', status: 'published' },
   { id: 'tool_heygen', slug: 'heygen', domain: 'heygen.com', websiteUrl: 'https://heygen.com', logoUrl: 'https://heygen.com/favicon.ico', nameEn: 'HeyGen', descriptionEn: 'AI video generator for creating professional videos with AI avatars. Perfect for marketing and training content.', nameZh: 'HeyGen', descriptionZh: 'AI视频生成器，用AI数字人创建专业视频。适合营销和培训内容。', status: 'published' },
   { id: 'tool_synthesia', slug: 'synthesia', domain: 'synthesia.io', websiteUrl: 'https://synthesia.io', logoUrl: 'https://synthesia.io/favicon.ico', nameEn: 'Synthesia', descriptionEn: 'Create AI videos with realistic avatars in 120+ languages. Popular for corporate training and marketing.', nameZh: 'Synthesia', descriptionZh: '用逼真数字人创建120多种语言的AI视频。在企业培训和营销领域广受欢迎。', status: 'published' },
   { id: 'tool_luma', slug: 'luma-ai', domain: 'lumalabs.ai', websiteUrl: 'https://lumalabs.ai', logoUrl: 'https://lumalabs.ai/favicon.ico', nameEn: 'Luma AI', descriptionEn: 'AI video generation with Dream Machine. Creates cinematic videos from text and images with impressive quality.', nameZh: 'Luma AI', descriptionZh: 'Dream Machine AI视频生成。从文本和图像创建高质量的电影级视频。', status: 'published' },
@@ -247,6 +248,8 @@ const toolCategoryData = [
   // 视频
   { toolId: 'tool_runway', categoryId: 'cat_video' },
   { toolId: 'tool_pika', categoryId: 'cat_video' },
+  { toolId: 'tool_imagineclip', categoryId: 'cat_video' },
+  { toolId: 'tool_imagineclip', categoryId: 'cat_business' },
   { toolId: 'tool_heygen', categoryId: 'cat_video' },
   { toolId: 'tool_heygen', categoryId: 'cat_business' },
   { toolId: 'tool_synthesia', categoryId: 'cat_video' },
@@ -423,6 +426,12 @@ const toolTagData = [
   { toolId: 'tool_pika', tagId: 'tag_diffusion' },
   { toolId: 'tool_pika', tagId: 'tag_video_out' },
   { toolId: 'tool_pika', tagId: 'tag_trending' },
+  // ImagineClip
+  { toolId: 'tool_imagineclip', tagId: 'tag_freemium' },
+  { toolId: 'tool_imagineclip', tagId: 'tag_creator' },
+  { toolId: 'tool_imagineclip', tagId: 'tag_marketer' },
+  { toolId: 'tool_imagineclip', tagId: 'tag_video_out' },
+  { toolId: 'tool_imagineclip', tagId: 'tag_new' },
   // HeyGen
   { toolId: 'tool_heygen', tagId: 'tag_paid' },
   { toolId: 'tool_heygen', tagId: 'tag_enterprise' },
