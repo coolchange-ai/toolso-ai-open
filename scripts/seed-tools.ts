@@ -8,7 +8,7 @@
  * 功能:
  * - 导入 10 个分类
  * - 导入 30 个标签
- * - 导入 50 个 AI 工具
+ * - 导入 51 个 AI 工具
  * - 建立工具-分类、工具-标签关联
  */
 
@@ -199,10 +199,11 @@ const toolsData = [
   { id: 'tool_mem', slug: 'mem-ai', domain: 'mem.ai', websiteUrl: 'https://mem.ai', logoUrl: 'https://mem.ai/favicon.ico', nameEn: 'Mem', descriptionEn: 'AI-powered note-taking app that organizes and surfaces relevant information automatically.', nameZh: 'Mem', descriptionZh: 'AI驱动的笔记应用，自动组织和呈现相关信息。', status: 'published' },
   { id: 'tool_motion', slug: 'motion', domain: 'usemotion.com', websiteUrl: 'https://usemotion.com', logoUrl: 'https://usemotion.com/favicon.ico', nameEn: 'Motion', descriptionEn: 'AI calendar and project management. Automatically schedules tasks and meetings for optimal productivity.', nameZh: 'Motion', descriptionZh: 'AI日历和项目管理工具。自动安排任务和会议以实现最佳生产力。', status: 'published' },
 
-  // AI 研究与分析 (3个)
+  // AI 研究与分析 (4个)
   { id: 'tool_consensus', slug: 'consensus', domain: 'consensus.app', websiteUrl: 'https://consensus.app', logoUrl: 'https://consensus.app/favicon.ico', nameEn: 'Consensus', descriptionEn: 'AI-powered academic search engine. Find and understand scientific research with AI summaries.', nameZh: 'Consensus', descriptionZh: 'AI驱动的学术搜索引擎。通过AI摘要查找和理解科学研究。', status: 'published' },
   { id: 'tool_elicit', slug: 'elicit', domain: 'elicit.com', websiteUrl: 'https://elicit.com', logoUrl: 'https://elicit.com/favicon.ico', nameEn: 'Elicit', descriptionEn: 'AI research assistant that helps find, summarize, and extract data from academic papers.', nameZh: 'Elicit', descriptionZh: 'AI研究助手，帮助查找、总结和提取学术论文中的数据。', status: 'published' },
   { id: 'tool_scite', slug: 'scite', domain: 'scite.ai', websiteUrl: 'https://scite.ai', logoUrl: 'https://scite.ai/favicon.ico', nameEn: 'Scite', descriptionEn: 'AI tool for evaluating scientific claims. Shows how papers cite each other with supporting or contrasting evidence.', nameZh: 'Scite', descriptionZh: 'AI科学声明评估工具。显示论文如何相互引用，包含支持或对比证据。', status: 'published' },
+  { id: 'tool_fpvtune', slug: 'fpvtune', domain: 'fpvtune.com', websiteUrl: 'https://fpvtune.com/', logoUrl: 'https://www.google.com/s2/favicons?domain=fpvtune.com&sz=128', nameEn: 'FPVTune', descriptionEn: 'AI-assisted Betaflight blackbox log analyzer for FPV drone tuning. It helps pilots review flight data and tune filters and PID settings.', nameZh: 'FPVTune', descriptionZh: '面向 FPV 穿越机调参的 AI 辅助 Betaflight 黑匣子日志分析工具，帮助飞手查看飞行数据并调整滤波和 PID 设置。', status: 'published' },
 
   // AI 设计 (3个)
   { id: 'tool_figma_ai', slug: 'figma-ai', domain: 'figma.com', websiteUrl: 'https://figma.com', logoUrl: 'https://figma.com/favicon.ico', nameEn: 'Figma AI', descriptionEn: 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', nameZh: 'Figma AI', descriptionZh: 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', status: 'published' },
@@ -276,6 +277,7 @@ const toolCategoryData = [
   { toolId: 'tool_consensus', categoryId: 'cat_research' },
   { toolId: 'tool_elicit', categoryId: 'cat_research' },
   { toolId: 'tool_scite', categoryId: 'cat_research' },
+  { toolId: 'tool_fpvtune', categoryId: 'cat_research' },
   // 设计
   { toolId: 'tool_figma_ai', categoryId: 'cat_design' },
   { toolId: 'tool_uizard', categoryId: 'cat_design' },
@@ -538,6 +540,11 @@ const toolTagData = [
   { toolId: 'tool_scite', tagId: 'tag_paid' },
   { toolId: 'tool_scite', tagId: 'tag_student' },
   { toolId: 'tool_scite', tagId: 'tag_text' },
+  // FPVTune
+  { toolId: 'tool_fpvtune', tagId: 'tag_freemium' },
+  { toolId: 'tool_fpvtune', tagId: 'tag_realtime' },
+  { toolId: 'tool_fpvtune', tagId: 'tag_creator' },
+  { toolId: 'tool_fpvtune', tagId: 'tag_text' },
   // Figma AI
   { toolId: 'tool_figma_ai', tagId: 'tag_paid' },
   { toolId: 'tool_figma_ai', tagId: 'tag_collaborative' },
@@ -582,7 +589,7 @@ async function seedTools() {
     console.log("✅ 标签数据导入完成\n");
 
     // 3. 导入工具
-    console.log("🔧 导入工具数据 (50 个)...");
+    console.log("🔧 导入工具数据 (51 个)...");
     for (const t of toolsData) {
       await db.insert(tool).values(t).onConflictDoNothing();
     }
