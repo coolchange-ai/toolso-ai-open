@@ -1,7 +1,7 @@
 -- =============================================
 -- AI 工具导航站种子数据
 -- 生成时间: 2025年1月
--- 包含: 10个分类, 30个标签, 50个工具
+-- 包含: 10个分类, 30个标签, 51个工具
 -- Logo 使用 Google Favicon 服务
 -- =============================================
 
@@ -57,7 +57,7 @@ INSERT INTO tag (id, slug, name_en, name_zh) VALUES
 ('tag_editors_choice', 'editors-choice', 'Editor''s Choice', '编辑推荐'),
 ('tag_best_2025', 'best-of-2025', 'Best of 2025', '2025精选');
 
--- ========== 3. 工具数据 (50个) ==========
+-- ========== 3. 工具数据 (51个) ==========
 INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name_en, description_en, name_zh, description_zh, status) VALUES
 -- AI 聊天机器人 (8个)
 ('tool_chatgpt', 'chatgpt', 'chat.openai.com', 'https://chat.openai.com', NULL, 'https://www.google.com/s2/favicons?domain=chat.openai.com&sz=128', 'ChatGPT', 'OpenAI''s advanced conversational AI assistant powered by GPT-4. Capable of natural conversations, code generation, creative writing, and complex reasoning.', 'ChatGPT', 'OpenAI推出的先进对话式AI助手，由GPT-4驱动。能够进行自然对话、代码生成、创意写作和复杂推理。', 'published'),
@@ -117,10 +117,11 @@ INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name
 ('tool_mem', 'mem-ai', 'mem.ai', 'https://mem.ai', NULL, 'https://www.google.com/s2/favicons?domain=mem.ai&sz=128', 'Mem', 'AI-powered note-taking app that organizes and surfaces relevant information automatically.', 'Mem', 'AI驱动的笔记应用，自动组织和呈现相关信息。', 'published'),
 ('tool_motion', 'motion', 'usemotion.com', 'https://usemotion.com', NULL, 'https://www.google.com/s2/favicons?domain=usemotion.com&sz=128', 'Motion', 'AI calendar and project management. Automatically schedules tasks and meetings for optimal productivity.', 'Motion', 'AI日历和项目管理工具。自动安排任务和会议以实现最佳生产力。', 'published'),
 
--- AI 研究与分析 (3个)
+-- AI 研究与分析 (4个)
 ('tool_consensus', 'consensus', 'consensus.app', 'https://consensus.app', NULL, 'https://www.google.com/s2/favicons?domain=consensus.app&sz=128', 'Consensus', 'AI-powered academic search engine. Find and understand scientific research with AI summaries.', 'Consensus', 'AI驱动的学术搜索引擎。通过AI摘要查找和理解科学研究。', 'published'),
 ('tool_elicit', 'elicit', 'elicit.com', 'https://elicit.com', NULL, 'https://www.google.com/s2/favicons?domain=elicit.com&sz=128', 'Elicit', 'AI research assistant that helps find, summarize, and extract data from academic papers.', 'Elicit', 'AI研究助手，帮助查找、总结和提取学术论文中的数据。', 'published'),
 ('tool_scite', 'scite', 'scite.ai', 'https://scite.ai', NULL, 'https://www.google.com/s2/favicons?domain=scite.ai&sz=128', 'Scite', 'AI tool for evaluating scientific claims. Shows how papers cite each other with supporting or contrasting evidence.', 'Scite', 'AI科学声明评估工具。显示论文如何相互引用，包含支持或对比证据。', 'published'),
+('tool_fpvtune', 'fpvtune', 'fpvtune.com', 'https://fpvtune.com/', NULL, 'https://www.google.com/s2/favicons?domain=fpvtune.com&sz=128', 'FPVTune', 'AI-assisted Betaflight blackbox log analyzer for FPV drone tuning. It helps pilots review flight data and tune filters and PID settings.', 'FPVTune', '面向 FPV 穿越机调参的 AI 辅助 Betaflight 黑匣子日志分析工具，帮助飞手查看飞行数据并调整滤波和 PID 设置。', 'published'),
 
 -- AI 设计 (3个)
 ('tool_figma_ai', 'figma-ai', 'figma.com', 'https://figma.com', NULL, 'https://www.google.com/s2/favicons?domain=figma.com&sz=128', 'Figma AI', 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', 'Figma AI', 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', 'published'),
@@ -193,6 +194,7 @@ INSERT INTO tool_category (tool_id, category_id) VALUES
 ('tool_consensus', 'cat_research'),
 ('tool_elicit', 'cat_research'),
 ('tool_scite', 'cat_research'),
+('tool_fpvtune', 'cat_research'),
 -- 设计
 ('tool_figma_ai', 'cat_design'),
 ('tool_uizard', 'cat_design'),
@@ -454,6 +456,11 @@ INSERT INTO tool_tag (tool_id, tag_id) VALUES
 ('tool_scite', 'tag_paid'),
 ('tool_scite', 'tag_student'),
 ('tool_scite', 'tag_text'),
+-- FPVTune
+('tool_fpvtune', 'tag_freemium'),
+('tool_fpvtune', 'tag_realtime'),
+('tool_fpvtune', 'tag_creator'),
+('tool_fpvtune', 'tag_text'),
 -- Figma AI
 ('tool_figma_ai', 'tag_paid'),
 ('tool_figma_ai', 'tag_collaborative'),
