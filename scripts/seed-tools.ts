@@ -8,7 +8,7 @@
  * 功能:
  * - 导入 10 个分类
  * - 导入 30 个标签
- * - 导入 50 个 AI 工具
+ * - 导入 51 个 AI 工具
  * - 建立工具-分类、工具-标签关联
  */
 
@@ -204,9 +204,10 @@ const toolsData = [
   { id: 'tool_elicit', slug: 'elicit', domain: 'elicit.com', websiteUrl: 'https://elicit.com', logoUrl: 'https://elicit.com/favicon.ico', nameEn: 'Elicit', descriptionEn: 'AI research assistant that helps find, summarize, and extract data from academic papers.', nameZh: 'Elicit', descriptionZh: 'AI研究助手，帮助查找、总结和提取学术论文中的数据。', status: 'published' },
   { id: 'tool_scite', slug: 'scite', domain: 'scite.ai', websiteUrl: 'https://scite.ai', logoUrl: 'https://scite.ai/favicon.ico', nameEn: 'Scite', descriptionEn: 'AI tool for evaluating scientific claims. Shows how papers cite each other with supporting or contrasting evidence.', nameZh: 'Scite', descriptionZh: 'AI科学声明评估工具。显示论文如何相互引用，包含支持或对比证据。', status: 'published' },
 
-  // AI 设计 (3个)
+  // AI 设计 (4个)
   { id: 'tool_figma_ai', slug: 'figma-ai', domain: 'figma.com', websiteUrl: 'https://figma.com', logoUrl: 'https://figma.com/favicon.ico', nameEn: 'Figma AI', descriptionEn: 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', nameZh: 'Figma AI', descriptionZh: 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', status: 'published' },
   { id: 'tool_uizard', slug: 'uizard', domain: 'uizard.io', websiteUrl: 'https://uizard.io', logoUrl: 'https://uizard.io/favicon.ico', nameEn: 'Uizard', descriptionEn: 'AI-powered UI design tool. Transform sketches and screenshots into editable designs.', nameZh: 'Uizard', descriptionZh: 'AI驱动的UI设计工具。将草图和截图转换为可编辑的设计。', status: 'published' },
+  { id: 'tool_roblox_gui_maker', slug: 'roblox-gui-maker', domain: 'robloxguimaker.dev', websiteUrl: 'https://robloxguimaker.dev/', logoUrl: 'https://www.google.com/s2/favicons?domain=robloxguimaker.dev&sz=128', nameEn: 'Roblox GUI Maker', descriptionEn: 'Free AI-assisted Roblox Studio GUI generator for drafting interface layouts, Roblox-style previews, and Lua starter code from a prompt.', nameZh: 'Roblox GUI Maker', descriptionZh: '免费的 AI 辅助 Roblox Studio GUI 生成工具，可根据提示词生成界面布局、Roblox 风格预览和 Lua 起始代码。', status: 'published' },
   { id: 'tool_magician', slug: 'magician', domain: 'magician.design', websiteUrl: 'https://magician.design', logoUrl: 'https://magician.design/favicon.ico', nameEn: 'Magician', descriptionEn: 'AI design assistant plugin for Figma. Generate icons, images, and copy with AI.', nameZh: 'Magician', descriptionZh: 'Figma的AI设计助手插件。用AI生成图标、图像和文案。', status: 'published' },
 ];
 
@@ -279,6 +280,7 @@ const toolCategoryData = [
   // 设计
   { toolId: 'tool_figma_ai', categoryId: 'cat_design' },
   { toolId: 'tool_uizard', categoryId: 'cat_design' },
+  { toolId: 'tool_roblox_gui_maker', categoryId: 'cat_design' },
   { toolId: 'tool_magician', categoryId: 'cat_design' },
 ];
 
@@ -547,6 +549,12 @@ const toolTagData = [
   { toolId: 'tool_uizard', tagId: 'tag_freemium' },
   { toolId: 'tool_uizard', tagId: 'tag_beginner' },
   { toolId: 'tool_uizard', tagId: 'tag_image_out' },
+  // Roblox GUI Maker
+  { toolId: 'tool_roblox_gui_maker', tagId: 'tag_free' },
+  { toolId: 'tool_roblox_gui_maker', tagId: 'tag_beginner' },
+  { toolId: 'tool_roblox_gui_maker', tagId: 'tag_creator' },
+  { toolId: 'tool_roblox_gui_maker', tagId: 'tag_text' },
+  { toolId: 'tool_roblox_gui_maker', tagId: 'tag_code_out' },
   // Magician
   { toolId: 'tool_magician', tagId: 'tag_paid' },
   { toolId: 'tool_magician', tagId: 'tag_image_out' },
@@ -582,7 +590,7 @@ async function seedTools() {
     console.log("✅ 标签数据导入完成\n");
 
     // 3. 导入工具
-    console.log("🔧 导入工具数据 (50 个)...");
+    console.log("🔧 导入工具数据 (51 个)...");
     for (const t of toolsData) {
       await db.insert(tool).values(t).onConflictDoNothing();
     }

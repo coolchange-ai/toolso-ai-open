@@ -1,7 +1,7 @@
 -- =============================================
 -- AI 工具导航站种子数据
 -- 生成时间: 2025年1月
--- 包含: 10个分类, 30个标签, 50个工具
+-- 包含: 10个分类, 30个标签, 51个工具
 -- Logo 使用 Google Favicon 服务
 -- =============================================
 
@@ -57,7 +57,7 @@ INSERT INTO tag (id, slug, name_en, name_zh) VALUES
 ('tag_editors_choice', 'editors-choice', 'Editor''s Choice', '编辑推荐'),
 ('tag_best_2025', 'best-of-2025', 'Best of 2025', '2025精选');
 
--- ========== 3. 工具数据 (50个) ==========
+-- ========== 3. 工具数据 (51个) ==========
 INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name_en, description_en, name_zh, description_zh, status) VALUES
 -- AI 聊天机器人 (8个)
 ('tool_chatgpt', 'chatgpt', 'chat.openai.com', 'https://chat.openai.com', NULL, 'https://www.google.com/s2/favicons?domain=chat.openai.com&sz=128', 'ChatGPT', 'OpenAI''s advanced conversational AI assistant powered by GPT-4. Capable of natural conversations, code generation, creative writing, and complex reasoning.', 'ChatGPT', 'OpenAI推出的先进对话式AI助手，由GPT-4驱动。能够进行自然对话、代码生成、创意写作和复杂推理。', 'published'),
@@ -122,9 +122,10 @@ INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name
 ('tool_elicit', 'elicit', 'elicit.com', 'https://elicit.com', NULL, 'https://www.google.com/s2/favicons?domain=elicit.com&sz=128', 'Elicit', 'AI research assistant that helps find, summarize, and extract data from academic papers.', 'Elicit', 'AI研究助手，帮助查找、总结和提取学术论文中的数据。', 'published'),
 ('tool_scite', 'scite', 'scite.ai', 'https://scite.ai', NULL, 'https://www.google.com/s2/favicons?domain=scite.ai&sz=128', 'Scite', 'AI tool for evaluating scientific claims. Shows how papers cite each other with supporting or contrasting evidence.', 'Scite', 'AI科学声明评估工具。显示论文如何相互引用，包含支持或对比证据。', 'published'),
 
--- AI 设计 (3个)
+-- AI 设计 (4个)
 ('tool_figma_ai', 'figma-ai', 'figma.com', 'https://figma.com', NULL, 'https://www.google.com/s2/favicons?domain=figma.com&sz=128', 'Figma AI', 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', 'Figma AI', 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', 'published'),
 ('tool_uizard', 'uizard', 'uizard.io', 'https://uizard.io', NULL, 'https://www.google.com/s2/favicons?domain=uizard.io&sz=128', 'Uizard', 'AI-powered UI design tool. Transform sketches and screenshots into editable designs.', 'Uizard', 'AI驱动的UI设计工具。将草图和截图转换为可编辑的设计。', 'published'),
+('tool_roblox_gui_maker', 'roblox-gui-maker', 'robloxguimaker.dev', 'https://robloxguimaker.dev/', NULL, 'https://www.google.com/s2/favicons?domain=robloxguimaker.dev&sz=128', 'Roblox GUI Maker', 'Free AI-assisted Roblox Studio GUI generator for drafting interface layouts, Roblox-style previews, and Lua starter code from a prompt.', 'Roblox GUI Maker', '免费的 AI 辅助 Roblox Studio GUI 生成工具，可根据提示词生成界面布局、Roblox 风格预览和 Lua 起始代码。', 'published'),
 ('tool_magician', 'magician', 'magician.design', 'https://magician.design', NULL, 'https://www.google.com/s2/favicons?domain=magician.design&sz=128', 'Magician', 'AI design assistant plugin for Figma. Generate icons, images, and copy with AI.', 'Magician', 'Figma的AI设计助手插件。用AI生成图标、图像和文案。', 'published');
 
 -- ========== 4. 工具-分类关联 ==========
@@ -196,6 +197,7 @@ INSERT INTO tool_category (tool_id, category_id) VALUES
 -- 设计
 ('tool_figma_ai', 'cat_design'),
 ('tool_uizard', 'cat_design'),
+('tool_roblox_gui_maker', 'cat_design'),
 ('tool_magician', 'cat_design');
 
 -- ========== 5. 工具-标签关联 ==========
@@ -463,6 +465,12 @@ INSERT INTO tool_tag (tool_id, tag_id) VALUES
 ('tool_uizard', 'tag_freemium'),
 ('tool_uizard', 'tag_beginner'),
 ('tool_uizard', 'tag_image_out'),
+-- Roblox GUI Maker
+('tool_roblox_gui_maker', 'tag_free'),
+('tool_roblox_gui_maker', 'tag_beginner'),
+('tool_roblox_gui_maker', 'tag_creator'),
+('tool_roblox_gui_maker', 'tag_text'),
+('tool_roblox_gui_maker', 'tag_code_out'),
 -- Magician
 ('tool_magician', 'tag_paid'),
 ('tool_magician', 'tag_image_out'),
