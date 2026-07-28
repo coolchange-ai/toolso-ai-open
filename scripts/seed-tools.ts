@@ -169,6 +169,7 @@ const toolsData = [
   { id: 'tool_playground', slug: 'playground-ai', domain: 'playground.com', websiteUrl: 'https://playground.com', logoUrl: 'https://playground.com/favicon.ico', nameEn: 'Playground AI', descriptionEn: 'Free AI image generator with powerful editing features. Great for beginners with intuitive interface.', nameZh: 'Playground AI', descriptionZh: '免费AI图像生成器，具有强大的编辑功能。界面直观，适合新手。', status: 'published' },
   { id: 'tool_canva_ai', slug: 'canva-ai', domain: 'canva.com', websiteUrl: 'https://canva.com', logoUrl: 'https://canva.com/favicon.ico', nameEn: 'Canva AI', descriptionEn: 'AI-powered design features within Canva including Magic Design, text-to-image, and background removal.', nameZh: 'Canva AI', descriptionZh: 'Canva中的AI设计功能，包括Magic Design、文生图和背景移除。', status: 'published' },
   { id: 'tool_adobe_firefly', slug: 'adobe-firefly', domain: 'firefly.adobe.com', websiteUrl: 'https://firefly.adobe.com', logoUrl: 'https://firefly.adobe.com/favicon.ico', nameEn: 'Adobe Firefly', descriptionEn: "Adobe's generative AI for creative professionals. Trained on licensed content for commercial safety.", nameZh: 'Adobe Firefly', descriptionZh: 'Adobe面向创意专业人士的生成式AI。在授权内容上训练，商用安全。', status: 'published' },
+  { id: 'tool_gpt_image_2', slug: 'gpt-image-2', domain: 'gptimage2.asia', websiteUrl: 'https://gptimage2.asia/', logoUrl: 'https://gptimage2.asia/favicon.ico', nameEn: 'GPT Image 2', descriptionEn: 'Browser-based AI image generator and editor for marketing, ecommerce, social media, and branded content.', nameZh: 'GPT Image 2', descriptionZh: '基于浏览器的AI图像生成和编辑工具，适合营销、电商、社交媒体和品牌内容。', status: 'published' },
 
   // AI 视频 (6个)
   { id: 'tool_runway', slug: 'runway', domain: 'runway.com', websiteUrl: 'https://runway.com', logoUrl: 'https://runway.com/favicon.ico', nameEn: 'Runway', descriptionEn: 'AI video generation and editing platform. Gen-2 creates videos from text or images with cinematic quality.', nameZh: 'Runway', descriptionZh: 'AI视频生成和编辑平台。Gen-2可从文本或图像创建电影级质量的视频。', status: 'published' },
@@ -244,6 +245,9 @@ const toolCategoryData = [
   { toolId: 'tool_canva_ai', categoryId: 'cat_design' },
   { toolId: 'tool_adobe_firefly', categoryId: 'cat_image' },
   { toolId: 'tool_adobe_firefly', categoryId: 'cat_design' },
+  { toolId: 'tool_gpt_image_2', categoryId: 'cat_image' },
+  { toolId: 'tool_gpt_image_2', categoryId: 'cat_design' },
+  { toolId: 'tool_gpt_image_2', categoryId: 'cat_business' },
   // 视频
   { toolId: 'tool_runway', categoryId: 'cat_video' },
   { toolId: 'tool_pika', categoryId: 'cat_video' },
@@ -412,6 +416,12 @@ const toolTagData = [
   { toolId: 'tool_adobe_firefly', tagId: 'tag_diffusion' },
   { toolId: 'tool_adobe_firefly', tagId: 'tag_enterprise' },
   { toolId: 'tool_adobe_firefly', tagId: 'tag_image_out' },
+  // GPT Image 2
+  { toolId: 'tool_gpt_image_2', tagId: 'tag_freemium' },
+  { toolId: 'tool_gpt_image_2', tagId: 'tag_gpt' },
+  { toolId: 'tool_gpt_image_2', tagId: 'tag_creator' },
+  { toolId: 'tool_gpt_image_2', tagId: 'tag_marketer' },
+  { toolId: 'tool_gpt_image_2', tagId: 'tag_image_out' },
   // Runway
   { toolId: 'tool_runway', tagId: 'tag_freemium' },
   { toolId: 'tool_runway', tagId: 'tag_diffusion' },

@@ -87,6 +87,7 @@ INSERT INTO tool (id, slug, domain, website_url, cover_image_url, logo_url, name
 ('tool_playground', 'playground-ai', 'playground.com', 'https://playground.com', NULL, 'https://www.google.com/s2/favicons?domain=playground.com&sz=128', 'Playground AI', 'Free AI image generator with powerful editing features. Great for beginners with intuitive interface.', 'Playground AI', '免费AI图像生成器，具有强大的编辑功能。界面直观，适合新手。', 'published'),
 ('tool_canva_ai', 'canva-ai', 'canva.com', 'https://canva.com', NULL, 'https://www.google.com/s2/favicons?domain=canva.com&sz=128', 'Canva AI', 'AI-powered design features within Canva including Magic Design, text-to-image, and background removal.', 'Canva AI', 'Canva中的AI设计功能，包括Magic Design、文生图和背景移除。', 'published'),
 ('tool_adobe_firefly', 'adobe-firefly', 'firefly.adobe.com', 'https://firefly.adobe.com', NULL, 'https://www.google.com/s2/favicons?domain=firefly.adobe.com&sz=128', 'Adobe Firefly', 'Adobe''s generative AI for creative professionals. Trained on licensed content for commercial safety.', 'Adobe Firefly', 'Adobe面向创意专业人士的生成式AI。在授权内容上训练，商用安全。', 'published'),
+('tool_gpt_image_2', 'gpt-image-2', 'gptimage2.asia', 'https://gptimage2.asia/', NULL, 'https://www.google.com/s2/favicons?domain=gptimage2.asia&sz=128', 'GPT Image 2', 'Browser-based AI image generator and editor for marketing, ecommerce, social media, and branded content.', 'GPT Image 2', '基于浏览器的AI图像生成和编辑工具，适合营销、电商、社交媒体和品牌内容。', 'published'),
 
 -- AI 视频 (6个)
 ('tool_runway', 'runway', 'runway.com', 'https://runway.com', NULL, 'https://www.google.com/s2/favicons?domain=runway.com&sz=128', 'Runway', 'AI video generation and editing platform. Gen-2 creates videos from text or images with cinematic quality.', 'Runway', 'AI视频生成和编辑平台。Gen-2可从文本或图像创建电影级质量的视频。', 'published'),
@@ -161,6 +162,9 @@ INSERT INTO tool_category (tool_id, category_id) VALUES
 ('tool_canva_ai', 'cat_design'),
 ('tool_adobe_firefly', 'cat_image'),
 ('tool_adobe_firefly', 'cat_design'),
+('tool_gpt_image_2', 'cat_image'),
+('tool_gpt_image_2', 'cat_design'),
+('tool_gpt_image_2', 'cat_business'),
 -- 视频
 ('tool_runway', 'cat_video'),
 ('tool_pika', 'cat_video'),
@@ -328,6 +332,12 @@ INSERT INTO tool_tag (tool_id, tag_id) VALUES
 ('tool_adobe_firefly', 'tag_diffusion'),
 ('tool_adobe_firefly', 'tag_enterprise'),
 ('tool_adobe_firefly', 'tag_image_out'),
+-- GPT Image 2
+('tool_gpt_image_2', 'tag_freemium'),
+('tool_gpt_image_2', 'tag_gpt'),
+('tool_gpt_image_2', 'tag_creator'),
+('tool_gpt_image_2', 'tag_marketer'),
+('tool_gpt_image_2', 'tag_image_out'),
 -- Runway
 ('tool_runway', 'tag_freemium'),
 ('tool_runway', 'tag_diffusion'),
