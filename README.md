@@ -483,6 +483,7 @@ DATABASE_URL=postgresql://toolso:toolso@localhost:5432/toolso pnpm admin:setup
 | **CoolChange.AI** | AI Development Studio | [https://coolchange.ai](https://coolchange.ai) |
 | **chatPPT.app** | AI Presentation Generator | [https://chatppt.app](https://chatppt.app) |
 | **AIHealthGuide** | AI Health Assistant | [https://aihealthguide.app](https://aihealthguide.app) |
+| **SaaSCity** | Gamified SaaS & AI Directory | [https://saascity.io](https://saascity.io) |
 
 <br/>
 
