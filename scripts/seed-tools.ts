@@ -133,6 +133,7 @@ const toolsData = [
   { id: 'tool_fireflies', slug: 'fireflies', domain: 'fireflies.ai', websiteUrl: 'https://fireflies.ai', logoUrl: 'https://fireflies.ai/favicon.ico', nameEn: 'Fireflies.ai', descriptionEn: 'AI notetaker for meetings. Records, transcribes, and summarizes meetings across all major platforms.', nameZh: 'Fireflies.ai', descriptionZh: '会议AI笔记助手。在所有主流平台上录制、转录和总结会议。', status: 'published' },
   { id: 'tool_mem', slug: 'mem-ai', domain: 'mem.ai', websiteUrl: 'https://mem.ai', logoUrl: 'https://mem.ai/favicon.ico', nameEn: 'Mem', descriptionEn: 'AI-powered note-taking app that organizes and surfaces relevant information automatically.', nameZh: 'Mem', descriptionZh: 'AI驱动的笔记应用，自动组织和呈现相关信息。', status: 'published' },
   { id: 'tool_motion', slug: 'motion', domain: 'usemotion.com', websiteUrl: 'https://usemotion.com', logoUrl: 'https://usemotion.com/favicon.ico', nameEn: 'Motion', descriptionEn: 'AI calendar and project management. Automatically schedules tasks and meetings for optimal productivity.', nameZh: 'Motion', descriptionZh: 'AI日历和项目管理工具。自动安排任务和会议以实现最佳生产力。', status: 'published' },
+  { id: 'tool_tudo', slug: 'tudo', domain: 'blynkai.app', websiteUrl: 'https://blynkai.app/tudo/', logoUrl: 'https://blynkai.app/favicon.ico', nameEn: 'Tudo', descriptionEn: 'AI task capture and personal planning app for turning quick thoughts into organized next actions.', nameZh: 'Tudo', descriptionZh: 'AI任务捕捉和个人规划应用，将临时想法整理为清晰的下一步行动。', status: 'published' },
 
   // AI 研究与分析 (3个)
   { id: 'tool_consensus', slug: 'consensus', domain: 'consensus.app', websiteUrl: 'https://consensus.app', logoUrl: 'https://consensus.app/favicon.ico', nameEn: 'Consensus', descriptionEn: 'AI-powered academic search engine. Find and understand scientific research with AI summaries.', nameZh: 'Consensus', descriptionZh: 'AI驱动的学术搜索引擎。通过AI摘要查找和理解科学研究。', status: 'published' },
@@ -207,6 +208,7 @@ const toolCategoryData = [
   { toolId: 'tool_fireflies', categoryId: 'cat_productivity' },
   { toolId: 'tool_mem', categoryId: 'cat_productivity' },
   { toolId: 'tool_motion', categoryId: 'cat_productivity' },
+  { toolId: 'tool_tudo', categoryId: 'cat_productivity' },
   // 研究
   { toolId: 'tool_consensus', categoryId: 'cat_research' },
   { toolId: 'tool_elicit', categoryId: 'cat_research' },
@@ -252,6 +254,11 @@ const toolTagData = [
   { toolId: 'tool_poe', tagId: 'tag_llm' },
   { toolId: 'tool_poe', tagId: 'tag_beginner' },
   { toolId: 'tool_poe', tagId: 'tag_mobile' },
+  // Tudo
+  { toolId: 'tool_tudo', tagId: 'tag_freemium' },
+  { toolId: 'tool_tudo', tagId: 'tag_mobile' },
+  { toolId: 'tool_tudo', tagId: 'tag_beginner' },
+  { toolId: 'tool_tudo', tagId: 'tag_text' },
   // Character.AI
   { toolId: 'tool_character', tagId: 'tag_free' },
   { toolId: 'tool_character', tagId: 'tag_llm' },
