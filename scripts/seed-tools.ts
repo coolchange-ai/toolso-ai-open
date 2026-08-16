@@ -8,7 +8,7 @@
  * 功能:
  * - 导入 10 个分类
  * - 导入 30 个标签
- * - 导入 50 个 AI 工具
+ * - 导入 51 个 AI 工具
  * - 建立工具-分类、工具-标签关联
  */
 
@@ -138,6 +138,7 @@ const toolsData = [
   { id: 'tool_consensus', slug: 'consensus', domain: 'consensus.app', websiteUrl: 'https://consensus.app', logoUrl: 'https://consensus.app/favicon.ico', nameEn: 'Consensus', descriptionEn: 'AI-powered academic search engine. Find and understand scientific research with AI summaries.', nameZh: 'Consensus', descriptionZh: 'AI驱动的学术搜索引擎。通过AI摘要查找和理解科学研究。', status: 'published' },
   { id: 'tool_elicit', slug: 'elicit', domain: 'elicit.com', websiteUrl: 'https://elicit.com', logoUrl: 'https://elicit.com/favicon.ico', nameEn: 'Elicit', descriptionEn: 'AI research assistant that helps find, summarize, and extract data from academic papers.', nameZh: 'Elicit', descriptionZh: 'AI研究助手，帮助查找、总结和提取学术论文中的数据。', status: 'published' },
   { id: 'tool_scite', slug: 'scite', domain: 'scite.ai', websiteUrl: 'https://scite.ai', logoUrl: 'https://scite.ai/favicon.ico', nameEn: 'Scite', descriptionEn: 'AI tool for evaluating scientific claims. Shows how papers cite each other with supporting or contrasting evidence.', nameZh: 'Scite', descriptionZh: 'AI科学声明评估工具。显示论文如何相互引用，包含支持或对比证据。', status: 'published' },
+  { id: 'tool_ideahunter', slug: 'ideahunter', domain: 'ideahunter.today', websiteUrl: 'https://ideahunter.today', logoUrl: 'https://ideahunter.today/favicon.svg', nameEn: 'IdeaHunter', descriptionEn: 'AI startup idea research tool that helps solo founders validate demand, buyer pain, MVP scope, and monetization paths from public signals.', nameZh: 'IdeaHunter', descriptionZh: 'AI 创业想法研究工具，帮助独立创始人基于公开信号验证需求、买家痛点、MVP 范围和变现路径。', status: 'published' },
 
   // AI 设计 (3个)
   { id: 'tool_figma_ai', slug: 'figma-ai', domain: 'figma.com', websiteUrl: 'https://figma.com', logoUrl: 'https://figma.com/favicon.ico', nameEn: 'Figma AI', descriptionEn: 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', nameZh: 'Figma AI', descriptionZh: 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', status: 'published' },
@@ -211,6 +212,8 @@ const toolCategoryData = [
   { toolId: 'tool_consensus', categoryId: 'cat_research' },
   { toolId: 'tool_elicit', categoryId: 'cat_research' },
   { toolId: 'tool_scite', categoryId: 'cat_research' },
+  { toolId: 'tool_ideahunter', categoryId: 'cat_research' },
+  { toolId: 'tool_ideahunter', categoryId: 'cat_business' },
   // 设计
   { toolId: 'tool_figma_ai', categoryId: 'cat_design' },
   { toolId: 'tool_uizard', categoryId: 'cat_design' },
@@ -486,6 +489,13 @@ const toolTagData = [
   { toolId: 'tool_magician', tagId: 'tag_paid' },
   { toolId: 'tool_magician', tagId: 'tag_image_out' },
   { toolId: 'tool_magician', tagId: 'tag_text' },
+  // IdeaHunter
+  { toolId: 'tool_ideahunter', tagId: 'tag_freemium' },
+  { toolId: 'tool_ideahunter', tagId: 'tag_llm' },
+  { toolId: 'tool_ideahunter', tagId: 'tag_beginner' },
+  { toolId: 'tool_ideahunter', tagId: 'tag_developer' },
+  { toolId: 'tool_ideahunter', tagId: 'tag_text' },
+  { toolId: 'tool_ideahunter', tagId: 'tag_new' },
 ];
 
 // ========== 主函数 ==========
