@@ -1,0 +1,78 @@
+name: Tool submission
+description: Suggest an AI tool for editorial review
+title: "[Tool submission]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. A submission is a review request, not a guarantee of listing.
+        Please provide verifiable product information and disclose your relationship to the project.
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+      placeholder: Example AI
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Canonical website
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Product description
+      description: Explain what the product does, who it is for, and its AI functionality.
+    validations:
+      required: true
+  - type: input
+    id: categories
+    attributes:
+      label: Suggested categories
+      description: Use existing Toolso categories where possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Pricing
+      options:
+        - Free
+        - Freemium
+        - Paid
+        - Open source
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Verification links
+      description: Link to pricing, documentation, source code, or other primary evidence supporting the claims above.
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Relationship to the project
+      options:
+        - Owner or team member
+        - Authorized representative
+        - Independent user
+        - No relationship
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched for existing issues and pull requests for this tool.
+          required: true
+        - label: The website is publicly reachable over HTTPS and the description does not make unverifiable claims.
+          required: true
+        - label: I disclosed my relationship to the submitted project accurately.
+          required: true

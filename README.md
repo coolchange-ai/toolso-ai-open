@@ -234,6 +234,7 @@ The template supports multiple languages via `next-intl`:
 ## Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -460,6 +461,7 @@ DATABASE_URL=postgresql://toolso:toolso@localhost:5432/toolso pnpm admin:setup
 ## 贡献指南
 
 欢迎贡献！请随时提交 Pull Request。
+提交 Issue 或 Pull Request 前，请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 1. Fork 仓库
 2. 创建特性分支 (`git checkout -b feature/amazing-feature`)

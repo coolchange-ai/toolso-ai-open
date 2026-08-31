@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem in the open-source project
+title: "[Bug]: "
+body:
+  - type: checkboxes
+    id: duplicate
+    attributes:
+      label: Existing reports
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: Include the exact error and the page or command where it occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Install with ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        OS:
+        Node:
+        pnpm:
+        Commit SHA:
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots or sanitized logs. Do not include secrets.
