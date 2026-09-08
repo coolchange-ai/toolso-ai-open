@@ -143,6 +143,7 @@ const toolsData = [
   { id: 'tool_figma_ai', slug: 'figma-ai', domain: 'figma.com', websiteUrl: 'https://figma.com', logoUrl: 'https://figma.com/favicon.ico', nameEn: 'Figma AI', descriptionEn: 'AI features in Figma for generating designs, renaming layers, and creating content automatically.', nameZh: 'Figma AI', descriptionZh: 'Figma中的AI功能，用于生成设计、重命名图层和自动创建内容。', status: 'published' },
   { id: 'tool_uizard', slug: 'uizard', domain: 'uizard.io', websiteUrl: 'https://uizard.io', logoUrl: 'https://uizard.io/favicon.ico', nameEn: 'Uizard', descriptionEn: 'AI-powered UI design tool. Transform sketches and screenshots into editable designs.', nameZh: 'Uizard', descriptionZh: 'AI驱动的UI设计工具。将草图和截图转换为可编辑的设计。', status: 'published' },
   { id: 'tool_magician', slug: 'magician', domain: 'magician.design', websiteUrl: 'https://magician.design', logoUrl: 'https://magician.design/favicon.ico', nameEn: 'Magician', descriptionEn: 'AI design assistant plugin for Figma. Generate icons, images, and copy with AI.', nameZh: 'Magician', descriptionZh: 'Figma的AI设计助手插件。用AI生成图标、图像和文案。', status: 'published' },
+  { id: 'tool_remio', slug: 'remio', domain: 'remio.ai', websiteUrl: 'https://remio.ai/', logoUrl: 'https://www.google.com/s2/favicons?domain=remio.ai&sz=128', nameEn: 'Remio', descriptionEn: 'Local-first AI memory and knowledge base desktop app that parses files, webpages, recordings, emails, messages, images, and notes into local indexes and vectors for focused personal and agent context retrieval.', nameZh: 'Remio', descriptionZh: '本地优先的 AI 记忆与知识库桌面应用，可解析文件、网页、录音、邮件、消息、图片和笔记，并构建本地索引与向量，帮助用户和 Agent 更快检索精准上下文。', status: 'published' }
 ];
 
 // 工具-分类关联数据
@@ -207,6 +208,8 @@ const toolCategoryData = [
   { toolId: 'tool_fireflies', categoryId: 'cat_productivity' },
   { toolId: 'tool_mem', categoryId: 'cat_productivity' },
   { toolId: 'tool_motion', categoryId: 'cat_productivity' },
+  { toolId: 'tool_remio', categoryId: 'cat_productivity' },
+  { toolId: 'tool_remio', categoryId: 'cat_research' },
   // 研究
   { toolId: 'tool_consensus', categoryId: 'cat_research' },
   { toolId: 'tool_elicit', categoryId: 'cat_research' },
@@ -456,6 +459,9 @@ const toolTagData = [
   { toolId: 'tool_mem', tagId: 'tag_freemium' },
   { toolId: 'tool_mem', tagId: 'tag_llm' },
   { toolId: 'tool_mem', tagId: 'tag_text' },
+  { toolId: 'tool_remio', tagId: 'tag_freemium' },
+  { toolId: 'tool_remio', tagId: 'tag_desktop' },
+  { toolId: 'tool_remio', tagId: 'tag_text' },
   // Motion
   { toolId: 'tool_motion', tagId: 'tag_paid' },
   { toolId: 'tool_motion', tagId: 'tag_collaborative' },
@@ -517,7 +523,7 @@ async function seedTools() {
     console.log("✅ 标签数据导入完成\n");
 
     // 3. 导入工具（pricing 从定价标签推导，featured 从"编辑推荐"标签推导）
-    console.log("🔧 导入工具数据 (50 个)...");
+    console.log("🔧 导入工具数据 (51 个)...");
     const pricingTagMap: Record<string, string> = {
       tag_free: "free",
       tag_freemium: "freemium",
