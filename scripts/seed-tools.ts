@@ -105,13 +105,14 @@ const toolsData = [
   { id: 'tool_canva_ai', slug: 'canva-ai', domain: 'canva.com', websiteUrl: 'https://canva.com', logoUrl: 'https://canva.com/favicon.ico', nameEn: 'Canva AI', descriptionEn: 'AI-powered design features within Canva including Magic Design, text-to-image, and background removal.', nameZh: 'Canva AI', descriptionZh: 'Canva中的AI设计功能，包括Magic Design、文生图和背景移除。', status: 'published' },
   { id: 'tool_adobe_firefly', slug: 'adobe-firefly', domain: 'firefly.adobe.com', websiteUrl: 'https://firefly.adobe.com', logoUrl: 'https://firefly.adobe.com/favicon.ico', nameEn: 'Adobe Firefly', descriptionEn: "Adobe's generative AI for creative professionals. Trained on licensed content for commercial safety.", nameZh: 'Adobe Firefly', descriptionZh: 'Adobe面向创意专业人士的生成式AI。在授权内容上训练，商用安全。', status: 'published' },
 
-  // AI 视频 (6个)
+  // AI 视频 (7个)
   { id: 'tool_runway', slug: 'runway', domain: 'runway.com', websiteUrl: 'https://runway.com', logoUrl: 'https://runway.com/favicon.ico', nameEn: 'Runway', descriptionEn: 'AI video generation and editing platform. Gen-2 creates videos from text or images with cinematic quality.', nameZh: 'Runway', descriptionZh: 'AI视频生成和编辑平台。Gen-2可从文本或图像创建电影级质量的视频。', status: 'published' },
   { id: 'tool_pika', slug: 'pika', domain: 'pika.art', websiteUrl: 'https://pika.art', logoUrl: 'https://pika.art/favicon.ico', nameEn: 'Pika', descriptionEn: 'AI video generator that creates and edits videos from text prompts. Known for smooth animations and effects.', nameZh: 'Pika', descriptionZh: 'AI视频生成器，从文本提示创建和编辑视频。以流畅的动画和效果著称。', status: 'published' },
   { id: 'tool_heygen', slug: 'heygen', domain: 'heygen.com', websiteUrl: 'https://heygen.com', logoUrl: 'https://heygen.com/favicon.ico', nameEn: 'HeyGen', descriptionEn: 'AI video generator for creating professional videos with AI avatars. Perfect for marketing and training content.', nameZh: 'HeyGen', descriptionZh: 'AI视频生成器，用AI数字人创建专业视频。适合营销和培训内容。', status: 'published' },
   { id: 'tool_synthesia', slug: 'synthesia', domain: 'synthesia.io', websiteUrl: 'https://synthesia.io', logoUrl: 'https://synthesia.io/favicon.ico', nameEn: 'Synthesia', descriptionEn: 'Create AI videos with realistic avatars in 120+ languages. Popular for corporate training and marketing.', nameZh: 'Synthesia', descriptionZh: '用逼真数字人创建120多种语言的AI视频。在企业培训和营销领域广受欢迎。', status: 'published' },
   { id: 'tool_luma', slug: 'luma-ai', domain: 'lumalabs.ai', websiteUrl: 'https://lumalabs.ai', logoUrl: 'https://lumalabs.ai/favicon.ico', nameEn: 'Luma AI', descriptionEn: 'AI video generation with Dream Machine. Creates cinematic videos from text and images with impressive quality.', nameZh: 'Luma AI', descriptionZh: 'Dream Machine AI视频生成。从文本和图像创建高质量的电影级视频。', status: 'published' },
   { id: 'tool_kling', slug: 'kling-ai', domain: 'klingai.com', websiteUrl: 'https://klingai.com', logoUrl: 'https://klingai.com/favicon.ico', nameEn: 'Kling AI', descriptionEn: "Kuaishou's AI video generator with impressive motion and physics understanding. Creates realistic videos.", nameZh: 'Kling AI', descriptionZh: '快手的AI视频生成器，具有出色的运动和物理理解能力。创建逼真视频。', status: 'published' },
+  { id: 'tool_magic_hour', slug: 'magic-hour', domain: 'magichour.ai', websiteUrl: 'https://magichour.ai', logoUrl: 'https://magichour.ai/favicon.ico', nameEn: 'Magic Hour', descriptionEn: 'AI video creation platform for text-to-video, image-to-video, face swap, lip sync, animation, and production APIs.', nameZh: 'Magic Hour', descriptionZh: 'AI视频创作平台，支持文生视频、图生视频、换脸、口型同步、动画和生产API。', status: 'published' },
 
   // AI 音频与音乐 (5个)
   { id: 'tool_elevenlabs', slug: 'elevenlabs', domain: 'elevenlabs.io', websiteUrl: 'https://elevenlabs.io', logoUrl: 'https://elevenlabs.io/favicon.ico', nameEn: 'ElevenLabs', descriptionEn: 'Leading AI voice synthesis platform. Creates ultra-realistic voiceovers, dubbing, and voice cloning.', nameZh: 'ElevenLabs', descriptionZh: '领先的AI语音合成平台。创建超逼真的配音、翻译配音和声音克隆。', status: 'published' },
@@ -188,6 +189,7 @@ const toolCategoryData = [
   { toolId: 'tool_synthesia', categoryId: 'cat_business' },
   { toolId: 'tool_luma', categoryId: 'cat_video' },
   { toolId: 'tool_kling', categoryId: 'cat_video' },
+  { toolId: 'tool_magic_hour', categoryId: 'cat_video' },
   // 音频
   { toolId: 'tool_elevenlabs', categoryId: 'cat_audio' },
   { toolId: 'tool_suno', categoryId: 'cat_audio' },
@@ -378,6 +380,11 @@ const toolTagData = [
   { toolId: 'tool_kling', tagId: 'tag_diffusion' },
   { toolId: 'tool_kling', tagId: 'tag_video_out' },
   { toolId: 'tool_kling', tagId: 'tag_new' },
+  // Magic Hour
+  { toolId: 'tool_magic_hour', tagId: 'tag_freemium' },
+  { toolId: 'tool_magic_hour', tagId: 'tag_api' },
+  { toolId: 'tool_magic_hour', tagId: 'tag_creator' },
+  { toolId: 'tool_magic_hour', tagId: 'tag_video_out' },
   // ElevenLabs
   { toolId: 'tool_elevenlabs', tagId: 'tag_freemium' },
   { toolId: 'tool_elevenlabs', tagId: 'tag_api' },
