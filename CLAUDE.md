@@ -135,7 +135,7 @@ pnpm db:studio      # 启动 Drizzle Studio 数据库管理界面
 
 # 管理员工具
 pnpm admin:setup    # 创建管理员账户
-pnpm seed:tools     # 导入工具种子数据（50 工具/10 分类/30 标签）
+pnpm seed:tools     # 导入工具种子数据（51 工具/10 分类/30 标签）
 
 # 博客清单生成
 pnpm generate:blog-manifest

@@ -65,7 +65,7 @@ cp .env.example .env.local
 # Push database schema
 pnpm db:push
 
-# (Optional) Seed 50 AI tools, 10 categories and 30 tags
+# (Optional) Seed 51 AI tools, 10 categories and 30 tags
 pnpm seed:tools
 
 # (Optional) Create an admin account
@@ -291,7 +291,7 @@ cp .env.example .env.local
 # 推送数据库结构
 pnpm db:push
 
-# （可选）导入 50 个 AI 工具、10 个分类、30 个标签种子数据
+# （可选）导入 51 个 AI 工具、10 个分类、30 个标签种子数据
 pnpm seed:tools
 
 # （可选）创建管理员账户

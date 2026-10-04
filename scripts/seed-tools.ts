@@ -8,7 +8,7 @@
  * 功能:
  * - 导入 10 个分类
  * - 导入 30 个标签
- * - 导入 50 个 AI 工具
+ * - 导入 51 个 AI 工具
  * - 建立工具-分类、工具-标签关联
  */
 
@@ -120,13 +120,15 @@ const toolsData = [
   { id: 'tool_murf', slug: 'murf', domain: 'murf.ai', websiteUrl: 'https://murf.ai', logoUrl: 'https://murf.ai/favicon.ico', nameEn: 'Murf', descriptionEn: 'AI voice generator for creating professional voiceovers for videos, podcasts, and presentations.', nameZh: 'Murf', descriptionZh: 'AI语音生成器，为视频、播客和演示文稿创建专业配音。', status: 'published' },
   { id: 'tool_descript', slug: 'descript', domain: 'descript.com', websiteUrl: 'https://descript.com', logoUrl: 'https://descript.com/favicon.ico', nameEn: 'Descript', descriptionEn: 'AI-powered audio and video editor. Edit audio by editing text transcripts. Includes Overdub voice cloning.', nameZh: 'Descript', descriptionZh: 'AI驱动的音视频编辑器。通过编辑文字稿来编辑音频。包含Overdub声音克隆功能。', status: 'published' },
 
-  // AI 编程 (6个)
+  // AI 编程 (7个)
   { id: 'tool_github_copilot', slug: 'github-copilot', domain: 'github.com/features/copilot', websiteUrl: 'https://github.com/features/copilot', logoUrl: 'https://github.com/favicon.ico', nameEn: 'GitHub Copilot', descriptionEn: 'AI pair programmer by GitHub and OpenAI. Suggests code completions, functions, and entire files in your IDE.', nameZh: 'GitHub Copilot', descriptionZh: 'GitHub和OpenAI的AI结对编程助手。在IDE中建议代码补全、函数和完整文件。', status: 'published' },
   { id: 'tool_cursor', slug: 'cursor', domain: 'cursor.sh', websiteUrl: 'https://cursor.sh', logoUrl: 'https://cursor.sh/favicon.ico', nameEn: 'Cursor', descriptionEn: 'AI-first code editor built on VS Code. Deep AI integration for code generation, editing, and chat.', nameZh: 'Cursor', descriptionZh: '以AI为核心的代码编辑器，基于VS Code构建。深度AI集成，支持代码生成、编辑和对话。', status: 'published' },
   { id: 'tool_replit', slug: 'replit', domain: 'replit.com', websiteUrl: 'https://replit.com', logoUrl: 'https://replit.com/favicon.ico', nameEn: 'Replit AI', descriptionEn: 'Browser-based IDE with AI assistant. Code, deploy, and collaborate with AI-powered code generation.', nameZh: 'Replit AI', descriptionZh: '基于浏览器的IDE，内置AI助手。通过AI驱动的代码生成进行编码、部署和协作。', status: 'published' },
   { id: 'tool_codeium', slug: 'codeium', domain: 'codeium.com', websiteUrl: 'https://codeium.com', logoUrl: 'https://codeium.com/favicon.ico', nameEn: 'Codeium', descriptionEn: 'Free AI coding assistant supporting 70+ languages. Fast completions with IDE extensions for major editors.', nameZh: 'Codeium', descriptionZh: '免费AI编程助手，支持70多种语言。快速补全，为主流编辑器提供IDE插件。', status: 'published' },
   { id: 'tool_tabnine', slug: 'tabnine', domain: 'tabnine.com', websiteUrl: 'https://tabnine.com', logoUrl: 'https://tabnine.com/favicon.ico', nameEn: 'Tabnine', descriptionEn: 'AI code assistant with enterprise-grade privacy. Train on your codebase for personalized suggestions.', nameZh: 'Tabnine', descriptionZh: '企业级隐私的AI代码助手。在你的代码库上训练，提供个性化建议。', status: 'published' },
   { id: 'tool_claude_code', slug: 'claude-code', domain: 'claude.ai/code', websiteUrl: 'https://claude.ai/code', logoUrl: 'https://claude.ai/favicon.ico', nameEn: 'Claude Code', descriptionEn: "Anthropic's agentic coding tool. Natural language coding with full project context understanding.", nameZh: 'Claude Code', descriptionZh: 'Anthropic的代理式编程工具。支持自然语言编程，具有完整的项目上下文理解能力。', status: 'published' },
+
+  { id: 'tool_agent_qa', slug: 'agent-qa', domain: 'vostride.com', websiteUrl: 'https://vostride.com/docs/agent-qa', nameEn: 'Agent QA', descriptionEn: 'YAML regression tests for web, Android and iOS, run through a CLI, local dashboard or local MCP server. Currently free under FSL-1.1-ALv2; configured model, browser and device services may charge separately.', nameZh: 'Agent QA', descriptionZh: '通过 CLI、本地 dashboard 或本地 MCP 服务执行以 YAML 定义的 Web、Android 和 iOS 回归测试。目前免费，许可证为 FSL-1.1-ALv2；配置的模型、浏览器和设备服务可能另行收费。', status: 'published' },
 
   // AI 效率工具 (4个)
   { id: 'tool_otter', slug: 'otter-ai', domain: 'otter.ai', websiteUrl: 'https://otter.ai', logoUrl: 'https://otter.ai/favicon.ico', nameEn: 'Otter.ai', descriptionEn: 'AI meeting assistant that transcribes, summarizes, and creates action items from meetings automatically.', nameZh: 'Otter.ai', descriptionZh: 'AI会议助手，自动转录、总结会议并创建待办事项。', status: 'published' },
@@ -202,6 +204,7 @@ const toolCategoryData = [
   { toolId: 'tool_codeium', categoryId: 'cat_coding' },
   { toolId: 'tool_tabnine', categoryId: 'cat_coding' },
   { toolId: 'tool_claude_code', categoryId: 'cat_coding' },
+  { toolId: 'tool_agent_qa', categoryId: 'cat_coding' },
   // 效率
   { toolId: 'tool_otter', categoryId: 'cat_productivity' },
   { toolId: 'tool_fireflies', categoryId: 'cat_productivity' },
@@ -441,6 +444,9 @@ const toolTagData = [
   { toolId: 'tool_claude_code', tagId: 'tag_developer' },
   { toolId: 'tool_claude_code', tagId: 'tag_code_out' },
   { toolId: 'tool_claude_code', tagId: 'tag_new' },
+  // Agent QA
+  { toolId: 'tool_agent_qa', tagId: 'tag_free' },
+  { toolId: 'tool_agent_qa', tagId: 'tag_developer' },
   // Otter.ai
   { toolId: 'tool_otter', tagId: 'tag_freemium' },
   { toolId: 'tool_otter', tagId: 'tag_collaborative' },
@@ -517,7 +523,7 @@ async function seedTools() {
     console.log("✅ 标签数据导入完成\n");
 
     // 3. 导入工具（pricing 从定价标签推导，featured 从"编辑推荐"标签推导）
-    console.log("🔧 导入工具数据 (50 个)...");
+    console.log("🔧 导入工具数据 (51 个)...");
     const pricingTagMap: Record<string, string> = {
       tag_free: "free",
       tag_freemium: "freemium",
