@@ -76,6 +76,7 @@ const tagsData = [
 ];
 
 const toolsData = [
+  { id: 'tool_ai_tools_radar', slug: 'ai-tools-radar', domain: 'aitoolsradar.com', websiteUrl: 'https://aitoolsradar.com', logoUrl: 'https://aitoolsradar.com/brand/ai-tools-radar-logo-clean-192.png', nameEn: 'AI Tools Radar', descriptionEn: 'AI tools directory and editorial platform for discovering, comparing, and tracking AI products, with daily AI industry news.', nameZh: 'AI Tools Radar', descriptionZh: 'AI工具导航与产业资讯平台，帮助发现、比较和追踪AI产品，并提供每日AI行业资讯。', status: 'published' },
   // AI 聊天机器人 (8个)
   { id: 'tool_chatgpt', slug: 'chatgpt', domain: 'chat.openai.com', websiteUrl: 'https://chat.openai.com', logoUrl: 'https://chat.openai.com/favicon.ico', nameEn: 'ChatGPT', descriptionEn: "OpenAI's advanced conversational AI assistant powered by GPT-4. Capable of natural conversations, code generation, creative writing, and complex reasoning.", nameZh: 'ChatGPT', descriptionZh: 'OpenAI推出的先进对话式AI助手，由GPT-4驱动。能够进行自然对话、代码生成、创意写作和复杂推理。', status: 'published' },
   { id: 'tool_claude', slug: 'claude', domain: 'claude.ai', websiteUrl: 'https://claude.ai', logoUrl: 'https://claude.ai/favicon.ico', nameEn: 'Claude', descriptionEn: "Anthropic's helpful, harmless, and honest AI assistant. Known for nuanced understanding, long context windows, and thoughtful responses.", nameZh: 'Claude', descriptionZh: 'Anthropic推出的有用、无害、诚实的AI助手。以细腻的理解、长上下文窗口和深思熟虑的回复著称。', status: 'published' },
@@ -147,6 +148,8 @@ const toolsData = [
 
 // 工具-分类关联数据
 const toolCategoryData = [
+  { toolId: 'tool_ai_tools_radar', categoryId: 'cat_productivity' },
+  { toolId: 'tool_ai_tools_radar', categoryId: 'cat_research' },
   // 聊天机器人
   { toolId: 'tool_chatgpt', categoryId: 'cat_chatbot' },
   { toolId: 'tool_claude', categoryId: 'cat_chatbot' },
@@ -219,6 +222,10 @@ const toolCategoryData = [
 
 // 工具-标签关联数据
 const toolTagData = [
+  { toolId: 'tool_ai_tools_radar', tagId: 'tag_free' },
+  { toolId: 'tool_ai_tools_radar', tagId: 'tag_realtime' },
+  { toolId: 'tool_ai_tools_radar', tagId: 'tag_trending' },
+  { toolId: 'tool_ai_tools_radar', tagId: 'tag_text' },
   // ChatGPT
   { toolId: 'tool_chatgpt', tagId: 'tag_freemium' },
   { toolId: 'tool_chatgpt', tagId: 'tag_gpt' },
